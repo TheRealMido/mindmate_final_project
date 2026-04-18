@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Vibrant, warm creamy white */
+    --background: 35 100% 98%;
+    /* Deep espresso for soft but strong contrast */
+    --foreground: 20 80% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 80% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 80% 15%;
+
+    /* Vibrant Coral / Orange */
+    --primary: 15 90% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft sunny yellow */
+    --secondary: 40 100% 90%;
+    --secondary-foreground: 15 90% 30%;
+
+    /* Soft warm gray/peach */
+    --muted: 35 30% 92%;
+    --muted-foreground: 20 20% 50%;
+
+    /* Vibrant hot pink */
+    --accent: 335 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 30% 88%;
+    --input: 35 30% 88%;
+    --ring: 15 90% 60%;
+
+    --radius: 1rem; /* More playful, rounded corners */
+
+    --sidebar-background: 15 90% 96%;
+    --sidebar-foreground: 20 80% 20%;
+    --sidebar-primary: 15 90% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 100% 90%;
+    --sidebar-accent-foreground: 15 90% 30%;
+    --sidebar-border: 15 30% 88%;
+    --sidebar-ring: 15 90% 60%;
+
+    --sunrise-deep: 335 80% 40%;
+    --sunrise-mid: 15 90% 55%;
+    --sunrise-bright: 40 100% 60%;
+    --sunrise-light: 40 100% 85%;
+    --sunrise-glow: 15 90% 70%;
+
+    --gradient-ocean: linear-gradient(135deg, hsl(15 90% 60%), hsl(40 100% 60%)); /* Kept class name but changed colors to prevent breaks */
+    --gradient-calm: linear-gradient(180deg, hsl(35 100% 98% / 0.8), hsl(40 100% 92% / 0.8));
+    --gradient-accent: linear-gradient(135deg, hsl(15 90% 60%), hsl(335 85% 65%));
+
+    --shadow-soft: 0 8px 30px -4px hsl(15 90% 60% / 0.15);
+    --shadow-card: 0 12px 40px -8px hsl(15 90% 60% / 0.12);
+    --shadow-glow: 0 0 40px hsl(15 90% 60% / 0.25);
+  }
+
+  .dark {
+    /* Deep rich purple-black, more energetic than gray */
+    --background: 280 40% 8%;
+    --foreground: 35 100% 95%;
+
+    --card: 280 40% 12%;
+    --card-foreground: 35 100% 95%;
+
+    --popover: 280 40% 12%;
+    --popover-foreground: 35 100% 95%;
+
+    /* Brighter coral for dark mode pop */
+    --primary: 15 90% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 30% 18%;
+    --secondary-foreground: 35 100% 95%;
+
+    --muted: 280 20% 20%;
+    --muted-foreground: 280 20% 65%;
+
+    --accent: 335 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 30% 20%;
+    --input: 280 30% 20%;
+    --ring: 15 90% 65%;
+
+    --sidebar-background: 280 40% 8%;
+    --sidebar-foreground: 35 100% 95%;
+    --sidebar-primary: 15 90% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 280 30% 18%;
+    --sidebar-accent-foreground: 35 100% 95%;
+    --sidebar-border: 280 30% 20%;
+    --sidebar-ring: 15 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-ocean {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+}
